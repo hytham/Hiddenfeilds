@@ -11,26 +11,31 @@ class hiddenfeild{
 
                     // create a new div element and hide it
                     var div=document.createElement("div");
-                    div.style.visibility='hidden';
+                    div.style.display = "none";
 
                     // create a new text feild elemnt
 					var v=document.createElement("input")
 					v.setAttribute("type","text");
 					v.setAttribute("id","firstname");
-					v.setAttribute("value","");
-                    
+					v.setAttribute("value","test");
+                    v.addEventListener("input",function(){
+                        console.log("data was changed");
+                    });
                     // Append both elements to the form
                     div.appendChild(v);
 					frm.appendChild(div);
 
-                    v.addEventListener("change",function(){
-                        console.log("data was changed");
-                    });
+                   this.async();
 
 					
                 }
 
 				
 			}
+            async():void{
+                var v=document.getElementById("firstname");
+                
+                //setTimeout(this.async,100);
+            }
 
 }

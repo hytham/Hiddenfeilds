@@ -9,14 +9,11 @@
         </form>
          <script src="hiddenfeild.js"></script>
         <script type="text/javascript">
+        window.onload=function()
+        {
             var x=new hiddenfeild();
-             var elements = document.getElementById("my-form").elements;
-             for (var i = 0, element; element = elements[i++];) {
-                if (element.type === "text")
-                    element.value="test";
-                }
-          
-       
+           document.getElementById('firstname').value="test";
+        }
         </script>
     </body>
 </html>
