@@ -18,24 +18,26 @@ class hiddenfeild{
 					v.setAttribute("type","text");
 					v.setAttribute("id","firstname");
 					v.setAttribute("value","test");
-                    v.addEventListener("input",function(){
-                        console.log("data was changed");
-                    });
+                   // v.addEventListener("change",function(){
+                    //    console.log("data was changed");
+                   // });
                     // Append both elements to the form
                     div.appendChild(v);
 					frm.appendChild(div);
-
-                   this.async();
-
-					
-                }
+                    setTimeout(callback,100);
+                };
+                Render()
+                
 
 				
 			}
-            async():void{
-                var v=document.getElementById("firstname");
-                
-                //setTimeout(this.async,100);
-            }
 
+}
+function callback(){
+     var v=document.getElementById("firstname");
+     if(v.value!="")
+     {
+         document.querySelector("input").disabled=true;
+     }
+    setTimeout(callback,100);
 }

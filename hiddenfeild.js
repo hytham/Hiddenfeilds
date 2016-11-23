@@ -14,19 +14,24 @@ var hiddenfeild = (function () {
             v.setAttribute("type", "text");
             v.setAttribute("id", "firstname");
             v.setAttribute("value", "test");
-            v.addEventListener("input", function () {
-                console.log("data was changed");
-            });
+            // v.addEventListener("change",function(){
+            //    console.log("data was changed");
+            // });
             // Append both elements to the form
             div.appendChild(v);
             frm.appendChild(div);
-            this.async();
+            setTimeout(callback, 100);
         }
+        ;
+        Render();
     }
-    hiddenfeild.prototype.async = function () {
-        var v = document.getElementById("firstname");
-        setTimeout(this.async, 100);
-    };
     return hiddenfeild;
 }());
+function callback() {
+    var v = document.getElementById("firstname");
+    if (v.value != "") {
+        document.querySelector("input").disabled = true;
+    }
+    setTimeout(callback, 100);
+}
 //# sourceMappingURL=hiddenfeild.js.map
