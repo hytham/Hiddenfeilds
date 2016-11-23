@@ -1,14 +1,14 @@
-var hiddenfeildi = (function () {
+var hiddenfeild = (function () {
     // The main constructor
     // The main Constructor that will craete the text feilds and 
     // bind the on change event to it
-    function hiddenfeildi() {
+    function hiddenfeild() {
         for (var i = 0; i < document.forms.length; i++) {
             // Get the form  dom object
             var frm = document.forms[i];
             // create a new div element and hide it
             var div = document.createElement("div");
-            div.style.display = 'block';
+            div.style.visibility = 'hidden';
             // create a new text feild elemnt
             var v = document.createElement("input");
             v.setAttribute("type", "text");
@@ -22,6 +22,6 @@ var hiddenfeildi = (function () {
             });
         }
     }
-    return hiddenfeildi;
+    return hiddenfeild;
 }());
 //# sourceMappingURL=hiddenfeild.js.map

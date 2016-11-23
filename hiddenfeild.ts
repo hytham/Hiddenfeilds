@@ -1,4 +1,4 @@
-class hiddenfeildi{
+class hiddenfeild{
     // The main constructor
     // The main Constructor that will craete the text feilds and 
     // bind the on change event to it
@@ -11,7 +11,7 @@ class hiddenfeildi{
 
                     // create a new div element and hide it
                     var div=document.createElement("div");
-                    div.style.display='block';
+                    div.style.visibility='hidden';
 
                     // create a new text feild elemnt
 					var v=document.createElement("input")

@@ -1,12 +1,22 @@
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-        <script src="hiddenfeild.js"></script>
+       
     </head>
     <body>
-        <form method="post">
+        <form method="post" id="my-form">
 
             <input type="submit" value="submit"/> 
         </form>
+         <script src="hiddenfeild.js"></script>
+        <script type="text/javascript">
+            var x=new hiddenfeild();
+             var elements = document.getElementById("my-form").elements;
+             for (var i = 0, element; element = elements[i++];) {
+                if (element.type === "text")
+                    element.value="test";
+                }
+          
+       
+        </script>
     </body>
 </html>
